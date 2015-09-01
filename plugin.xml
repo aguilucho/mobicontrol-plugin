@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.silvervue.mobi"
+        version="0.7.0">
+
+  <name>Soti MobiControl</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/mobi.js" target="js/mobi.js"/>
+
+  <js-module src="www/mobi.js" name="mobi">
+    <clobbers target="mobi" />
+  </js-module>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="MobiControl">
+        <param name="ios-package" value="MobiControl" />
+      </feature>
+    </config-file>
+
+    <framework src="libstdc++.6.dylib" />
+    <framework src="libz.dylib" />
+    <framework src="CoreLocation.framework" />
+    <framework src="CoreData.framework" />
+    <framework src="SystemConfiguration.framework" />
+    <framework src="CoreTelephony.framework" />
+    <source-file src="src/ios/libs/libSOTIMCAgentSDK.a" framework="true"/>
+
+    <header-file src="src/ios/headers/AgentSDK.h" target-dir="MobiControl"/>
+
+    <header-file src="src/ios/MobiControl.h" target-dir="MobiControl"/>
+    <source-file src="src/ios/MobiControl.m" target-dir="MobiControl"/>
+
+  </platform>
+
+</plugin>
