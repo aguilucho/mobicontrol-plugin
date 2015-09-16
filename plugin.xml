@@ -33,6 +33,7 @@
 
     <header-file src="src/ios/headers/AgentSDK.h" target-dir="MobiControl"/>
 
+    <header-file src="src/ios/AgentSDKCertificate.h" target-dir="MobiControl"/>
     <header-file src="src/ios/MobiControl.h" target-dir="MobiControl"/>
     <source-file src="src/ios/MobiControl.m" target-dir="MobiControl"/>
 
