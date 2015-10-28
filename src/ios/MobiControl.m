@@ -1,6 +1,6 @@
 #import "AgentSDK.h"
 #import "MobiControl.h"
-#import Foundation;
+#import <Foundation/Foundation.h>
 
 #include "TargetConditionals.h"
 
