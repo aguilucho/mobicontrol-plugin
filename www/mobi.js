@@ -2,6 +2,6 @@
 
 module.exports = {
     init: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "init", "greet", [name]);
+	cordova.exec(successCallback, errorCallback, "MobiControl", "init", [name]);
     }
 };
