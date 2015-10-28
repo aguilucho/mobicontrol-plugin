@@ -1,5 +1,6 @@
 #import "AgentSDK.h"
 #import "MobiControl.h"
+#include "TargetConditionals.h"
 
 @implementation MobiControl
 
@@ -14,6 +15,8 @@
                                resultWithStatus:CDVCommandStatus_OK
                                messageAsString:msg];
 
+    #if TARGET_IPHONE_SIMULATOR
+    #else
     AgentSdkCore *agentSdkCore;
 
     // Create SDK instance. AgentSdkCore is a singleton.
@@ -21,7 +24,7 @@
 
     // Register self to receive notifications from SDK
     //[self.agentSdkCore registerDelegate:self];
-
+    #endif
 
     [self success:result callbackId:callbackId];
 }
