@@ -14,10 +14,10 @@
                                resultWithStatus:CDVCommandStatus_OK
                                messageAsString:msg];
 
-    //AgentSdkCore *agentSdkCore;
+    AgentSdkCore *agentSdkCore;
 
     // Create SDK instance. AgentSdkCore is a singleton.
-    //agentSdkCore = [AgentSdkCore getInstance];
+    agentSdkCore = [AgentSdkCore getInstance];
 
     // Register self to receive notifications from SDK
     //[self.agentSdkCore registerDelegate:self];
