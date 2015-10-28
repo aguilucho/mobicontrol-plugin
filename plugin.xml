@@ -29,6 +29,8 @@
     <framework src="CoreData.framework" />
     <framework src="SystemConfiguration.framework" />
     <framework src="CoreTelephony.framework" />
+    <resource-file src="src/ios/libs/SDKResources.bundle" target-dir="MobiControl/"/>
+
     <source-file src="src/ios/libs/libSOTIMCAgentSDK.a" framework="true"/>
 
     <header-file src="src/ios/headers/AgentSDK.h" target-dir="MobiControl"/>
