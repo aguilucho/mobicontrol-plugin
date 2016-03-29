@@ -29,7 +29,8 @@
        // Register self to receive notifications from SDK
        //[self.agentSdkCore registerDelegate:self];
        #endif
-    [self success:result callbackId:callbackId];
+
+    [self.commandDelegate sendPluginResult:result callbackId:callbackId];
 }
 
 @end
